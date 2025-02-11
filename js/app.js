@@ -10,16 +10,19 @@ function order(){
     let chosenTicket = document.getElementById('ticket-type');
     let quantity = parseInt(document.getElementById('qtd').value);
 
-    if(chosenTicket.value == 'lower'){
-        orderLower(quantity);
+    if(quantity < 0){
+        alert("The quantity number must be positive!")
+    } else{
+        if(chosenTicket.value == 'lower'){
+            orderLower(quantity);
+        }
+        if(chosenTicket.value == 'upper'){
+            orderUpper(quantity);
+        }
+        if(chosenTicket.value == 'moshpit'){
+            orderMoshpit(quantity);
+        }
     }
-    if(chosenTicket.value == 'upper'){
-        orderUpper(quantity);
-    }
-    if(chosenTicket.value == 'moshpit'){
-        orderMoshpit(quantity);
-    }
-
 };
 
 function orderLower(qtty){
