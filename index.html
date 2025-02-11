@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/_reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>e-Ticket</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./assets/PNG/Logo e-ticket.png" alt="Logo">
+    </header>
+    <main class="container">
+
+        <div class="graphism"></div>
+        <h1>Order your <span>ticket</span></h1>
+        <form action="">
+            <label class="input-group">
+                Choose the type
+                <select name="ticket-type" id="ticket-type">
+                    <option value="lower">Lower chair</option>
+                    <option value="upper">Upper chair</option>
+                    <option value="moshpit">Mosh pit</option>
+                </select>
+            </label>
+            <label class="input-group">Qnty.
+                <input type="number" id="qtd" placeholder="00" min="1" max="10">
+            </label>
+            <button onclick="order()" type="button">Order</button>
+        </form>
+        <img class="hachuras" src="./assets/SVG/Hachuras.svg" alt="">
+        <section>
+            <h2>Available Quantity</h2>
+
+            <ul class="list">
+                <li>Mosh pit<span id="mosh-pit">100</span></li>
+                <li>Upper chair<span id="upper-chair">200</span></li>
+                <li>Lower chair<span id="lower-chair">400</span></li>
+                
+            </ul>
+            <img src="./assets/Ingresso.svg" alt="">
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
